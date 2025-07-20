@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSave - Facebook Video Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="url(#gradient)" stroke="#4A90E2" stroke-width="2"/>
+                        <path d="M15 13L25 20L15 27V13Z" fill="#ffffff"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1 class="title">BSave</h1>
+            </div>
+            <p class="subtitle">Modern Facebook Video Downloader</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Download Section -->
+            <section class="download-section">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <i class="fas fa-link input-icon"></i>
+                        <input 
+                            type="url" 
+                            id="videoUrl" 
+                            placeholder="Paste your Facebook video URL here..."
+                            class="url-input"
+                        >
+                        <button id="downloadBtn" class="download-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Loading Spinner -->
+                <div id="loadingSpinner" class="loading-spinner hidden">
+                    <div class="spinner"></div>
+                    <p>Processing your video...</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message hidden">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="errorText"></span>
+                </div>
+
+                <!-- Video Preview Section -->
+                <div id="videoPreview" class="video-preview hidden">
+                    <div class="preview-container">
+                        <div class="video-thumbnail">
+                            <video id="previewVideo" controls poster="">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3 id="videoTitle">Video Title</h3>
+                            <div class="video-details">
+                                <span id="videoDuration">Duration: --:--</span>
+                                <span id="videoQuality">Quality: HD</span>
+                            </div>
+                            <div class="download-options">
+                                <button id="downloadVideoBtn" class="download-video-btn">
+                                    <i class="fas fa-download"></i>
+                                    Download Video
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2>Why Choose BSave?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Processing</h3>
+                        <p>Lightning-fast video processing and download speeds</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-hd-video"></i>
+                        <h3>High Quality</h3>
+                        <p>Download videos in original quality without compression</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure & Safe</h3>
+                        <p>Your privacy is protected with secure connections</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Friendly</h3>
+                        <p>Works perfectly on all devices and screen sizes</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="developer-section">
+                <h3>About Developer</h3>
+                <div class="developer-info">
+                    <div class="developer-text">
+                        <p><strong>FadelShafwan</strong></p>
+                        <p>Passionate 14-year-old developer creating innovative web solutions</p>
+                        <p>Dedicated to building user-friendly and efficient applications</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://tiktok.com/@fadelshafwan" target="_blank" class="social-link tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>Tiktok</span>
+                        </a>
+                        <a href="https://instagram.com/fadelshafwan" target="_blank" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VaxkfpeG8l55XNsBaq3Q" target="_blank" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BSave. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
